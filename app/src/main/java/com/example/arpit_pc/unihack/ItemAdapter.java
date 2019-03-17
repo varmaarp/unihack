@@ -31,7 +31,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         nameView.setText(currentItem.GetName());
 
         TextView carbonValueView = (TextView) listItemView.findViewById(R.id.carbonValueId);
-        carbonValueView.setText("Carbon Footprint - " + Float.toString(currentItem.GetCarbonValue()));
+        carbonValueView.setText("Carbon Footprint - " + Float.toString(currentItem.GetCarbonValue()) + " Kg");
 
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.

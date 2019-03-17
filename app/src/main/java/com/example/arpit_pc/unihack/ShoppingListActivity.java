@@ -65,7 +65,7 @@ public class ShoppingListActivity extends AppCompatActivity {
         }
 
         TextView totalVal = (TextView) findViewById(R.id.totalId);
-        totalVal.setText("Total Carbon Footprint - " + Float.toString(val));
+        totalVal.setText("Total Carbon Footprint - " + Float.toString(val) + " Kg");
     }
 
     private void GetData(){

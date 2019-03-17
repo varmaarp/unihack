@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
+
     private int getTempId(){
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select max(tripid) as val from table_temp", null);
@@ -187,6 +188,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView totalVal = (TextView) findViewById(R.id.totalCo2Id);
-        totalVal.setText("Total Carbon Footprint - " + Float.toString(val));
+        totalVal.setText("Total Carbon Footprint - " + Float.toString(val) + " Kg");
     }
 }
