@@ -11,46 +11,60 @@
         android:scaleType="centerCrop"
         android:src="@drawable/background"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@drawable/bg_rounded"
         android:id="@+id/currentListLayout"
+        android:orientation="horizontal"
         >
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
             android:layout_height="wrap_content"
-            android:id="@+id/currentListId"
-            android:text="Current List - 16 March 2018, 7:50 PM"
-            android:layout_margin="8dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/currentListId"
-            android:text="Total CO2 : "
-            android:layout_margin="8dp"/>
-    </RelativeLayout>
+            android:orientation="vertical"
+            android:id="@+id/linearId">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentListId"
+                android:text="Current List - 17 March 2018"
+                android:layout_margin="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#212121"
+                android:layout_below="@id/currentListId"
+                android:text="Total CO2 : "
+                android:id="@+id/totalCo2Id"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/editId"
+            android:clickable="true"
+            android:src="@drawable/ic_create_black"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="250dp"
         android:layout_margin="16dp"
         android:background="@drawable/bg_rounded"
         android:id="@+id/graphId"
         android:layout_below="@id/currentListLayout">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Place holder for chart"/>
-        <!--<com.github.mikephil.charting.charts.BarChart
+        <com.github.mikephil.charting.charts.BarChart
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/barGraphId">
 
         </com.github.mikephil.charting.charts.BarChart>
-        -->
+
 
     </RelativeLayout>
 

@@ -9,24 +9,35 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="300dp"
         android:layout_margin="16dp"
         android:background="@drawable/bg_rounded"
-        android:id="@+id/graphId"
+        android:id="@+id/tableId"
         android:layout_below="@id/currentListLayout">
 
-        <TextView
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textID"
-            android:text="Placeholder for table"/>
+            android:id="@+id/listId"></ListView>
 
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textID"
-            android:id="@+id/resultId"/>
+            android:id="@+id/resultId"/>-->
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:textSize="24sp"
+        android:textColor="#212121"
+        android:id="@+id/totalId"
+        android:layout_below="@id/tableId"
+        android:background="@drawable/bg_rounded"
+        android:text="Total Carbon Footprint - "/>
 
     <android.support.v7.widget.Toolbar  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
